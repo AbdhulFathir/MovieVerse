@@ -1,19 +1,20 @@
 package com.example.movieverse.db
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
 interface MovieDao {
-//
-//    @Insert(onConflict = OnConflictStrategy.REPLACE)
-//    suspend fun insertMovie(movie: MovieEntity)
+    @Query("SELECT * FROM movies ORDER BY id DESC")
+    fun getAllMovies(): LiveData<List<Movie>>
 
     @Insert
-    fun insertAll(item: MovieEntity)
+    fun addMovie(item: Movie)
 
 //    @Query("SELECT * FROM movies WHERE actors LIKE '%' || :actor || '%' COLLATE NOCASE")
 //    suspend fun searchByActor(actor: String): List<MovieEntity>
 //
 //    @Query("SELECT * FROM movies")
 //    suspend fun getAll(): List<MovieEntity>
+
 }

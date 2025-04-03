@@ -72,8 +72,6 @@ class MainActivity : ComponentActivity() {
                             val intent = Intent(this@MainActivity, SearchByTitle::class.java)
                             startActivity(intent)
                         }
-
-
                     }
                 }
             }

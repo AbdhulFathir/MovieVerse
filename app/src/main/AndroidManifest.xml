@@ -23,6 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AddMovies" android:exported="false"/>
+        <activity android:name=".SearchActors" android:exported="false"/>
+        <activity android:name=".SearchMovies" android:exported="false"/>
+        <activity android:name=".SearchByTitle" android:exported="false"/>
     </application>
 
 </manifest>
